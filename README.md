@@ -57,10 +57,10 @@ Refer to this [link](https://mmsegmentation.readthedocs.io/en/latest/inference.h
 
 |   | vit-12500  | vit-25000  | vit-50000  | swin-12500   | swin-25000   | swin-50000   |
 |---|---|---|---|---|---|---|
-| testset1 |   |   |   |   |   |   |
-| testset2 |   |   |   |   |   |   |
-| testset3  |   |   |   |   |   |   |
-| testset4  |   |   |   |   |   |   |
+| testset1 (_6)| 83.15 |  83.59 | 84.08  |  83.78 | 84.0  | 83.6  |
+| testset2 (_7x)|   |   |   |   |   |   |
+| testset3 (_9) |   |   |   |   |   |   |
+| testset4 (_10)|  83.55 | 83.09  |  82.93 |  82.18 |  82.31 | 80.47  |
 
 
 ## Known Issues:
