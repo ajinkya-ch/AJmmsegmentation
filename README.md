@@ -1,5 +1,8 @@
-# VTFS
-Repository for the developments related to the project Transformers for Science
+# Vision Transformers for Segmentation of Ceramic Matrix Fibers:
+Repository for the developments related to Transformers for Science.
+
+Based on [MMsegmentation](https://github.com/open-mmlab/mmsegmentation/tree/63f83258469cbe324143af51da4397aa3223dfd0).
+Work done by Ajinkya Chaudhari at LBNL.
 
 
 
@@ -8,21 +11,12 @@ Repository for the developments related to the project Transformers for Science
 
 1. Create a conda environment 
 - `conda create --name VTFS_env python=3.7`
-2. Clone this repository:
-- `git clone https://github.com/LBNL-CRD-MLA/VTFS.git`
 
-3. Install torch and torchvision:
-- `pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html`
+2. Install dependencies
+- `pip install -r requirements.txt`
 
-4. Install mmsegmentation:
-- `pip install mmcv-full==1.5.0 -f https://download.openmmlab.com/mmcv/dist/cu111/torch1.9/index.html`
-- `git clone https://github.com/open-mmlab/mmsegmentation.git`
-- `cd src/mmsegmentation`
-- `pip install -v -e .`
-
-5. Move `mydata.py` to ___ using `mv mydata.py /...`
-
-6. Move `mytransforms.py` to ___ using `mv mytransforms.py /...`
+3. Clone this repository:
+- `git clone https://github.com/ajinkya-ch/AJmmsegmentation.git`
 
 
 
@@ -34,7 +28,7 @@ Refer to this [link](https://mmsegmentation.readthedocs.io/en/latest/train.html)
 
 ## Inference:
 
-Eg: Using Vision Transformer (ViT) trained on 12500 data to infer on test data using 4 GPUs: `sh ./src/mmsegmentation/tools/dist_test.sh ./config/vit/vitconfig12500.py {path_to_pretrained_model} 4 --out ./results.pkl --eval mDice`
+Eg: Using Vision Transformer (ViT) trained on 12500 data to infer on test data using 4 GPUs: `sh ./src/mmsegmentation/tools/dist_test.sh ./config/vit/vitconfig12500.py {path_to_pretrained_model} 4 --eval mDice`
 
 Refer to this [link](https://mmsegmentation.readthedocs.io/en/latest/inference.html) for more information.
 
@@ -67,5 +61,5 @@ Refer to this [link](https://mmsegmentation.readthedocs.io/en/latest/inference.h
 
 1. KeyError: 'flip' : Solve by refering to this [solution](https://github.com/open-mmlab/mmsegmentation/issues/231)
 
-2. No such file found ../Image.tiff : Solve by editing the suffix in mydata.py
+2. No such file found ../Image.tiff : Solve by editing the suffix in ./src/mmseg/datasets/mydata.py
 
